@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>DotNet-Starter-Template</id>
+    <version>$version$</version>
+    <title>DotNet-Starter-Template</title>
+    <authors>Joseph McNeal Jr and Contributors</authors>
+    <owners>Joseph McNeal Jr and Contributors</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/TheMofaDe/DotNet-Starter-Template</projectUrl>
+    <iconUrl>https://github.com/TheMofaDe/DotNet-Starter-Template</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This is just a sample example project</description>
+    <language>en-US</language>
+    <tags>Template .NET </tags>
+    <developmentDependency>true</developmentDependency>
+    <releaseNotes>https://github.com/TheMofaDe/DotNet-Starter-Template/releases</releaseNotes>
+  </metadata>
+</package>
