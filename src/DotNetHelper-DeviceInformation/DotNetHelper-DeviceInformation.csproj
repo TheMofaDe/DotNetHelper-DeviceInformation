@@ -8,21 +8,22 @@
  
     <RootNamespace>DotNetHelper_DeviceInformation</RootNamespace>
     <AssemblyName>DotNetHelper-DeviceInformation</AssemblyName>
-    <FileVersion>2019.1.30.1</FileVersion>
+    <FileVersion>1.0.0.0</FileVersion>
 
     
     <Description>Provide Access To Device Hardware &amp; OS information,</Description>
-    <Copyright>Copyright © Joseph McNeal Jr 2017-2018</Copyright>
+    <Copyright>Copyright © Joseph McNeal Jr 2017-2019</Copyright>
     <AssemblyTitle>DotNetHelper-DeviceInformation</AssemblyTitle>
     <Version>2019.1.30.1</Version>
     <Authors>Joseph McNeal Jr</Authors>
     <PackageTags>Dotnethelper</PackageTags>
-    <PackageReleaseNotes></PackageReleaseNotes>
-    <PackageProjectUrl></PackageProjectUrl>
-    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageReleaseNotes>initial release</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/TheMofaDe/DotNetHelper-DeviceInformation</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/TheMofaDe/DotNetHelper-DeviceInformation/blob/master/LICENSE.md</PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl></RepositoryUrl>
+    <RepositoryUrl>https://github.com/TheMofaDe/DotNetHelper-DeviceInformation</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
