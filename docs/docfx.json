@@ -1,0 +1,76 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../",
+          "files": [
+            "src/**.csproj"
+          ],
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**",
+            "_site/**"
+          ]
+        }
+       //,{
+       //  "src": "../",
+       //  "files": [
+       //    "generics/**.csproj"
+       //  ],
+       //  "exclude": [
+       //    "**/obj/**",
+       //    "**/bin/**",
+       //    "_site/**"
+       //  ]
+       //}
+      ],
+      "dest": "api",
+      "properties": {
+        "TargetFramework": "net452"
+      }
+    }
+  ],
+  "build": {
+
+    "content": [
+      {
+        "files": [ "**/*.yml", "**/**/*.yml" ],
+        "src": "api",
+        "dest": "api"
+      },
+      {
+        "files": [ "articles/**/*.md", "*.md", "toc.yml" ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [ "articles/images/**" ]
+      }
+    ],
+    "globalMetadata": {
+      "_appTitle": "DotNetHelper-Contracts",
+      "_disableContribution": false,
+      "_disableBreadcrumb": false,
+      "_appFaviconPath": "logo/favicon.ico",
+      "_disableNavbar": false,
+      "_enableSearch": true,
+   //   "_navRel": "../toc.html",
+      "_appFooter": "Copyright © 2019 Joseph McNeal Jr"
+    },
+    "dest": "_site",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    //   "template": [
+    //     "default",
+    //     "lucenetemplate"
+    //   ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+    "keepFileLink": true,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}

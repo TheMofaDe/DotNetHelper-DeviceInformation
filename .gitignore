@@ -27,7 +27,9 @@ bld/
 
 # Build related
 tools/**
-[Dd]ocs/**
+#[Dd]ocs/**
+#[Dd]ocs/_site/**
+#[Dd]ocs/api/**
 !tools/packages.config
 
 
