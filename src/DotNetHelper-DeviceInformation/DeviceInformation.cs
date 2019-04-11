@@ -319,7 +319,7 @@ namespace DotNetHelper_DeviceInformation
             {
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                 {
-                    if (Environment.CommandLine.Contains(".apk"))
+                    if (Environment.CommandLine.Contains(".apk")) // TODO :: Do you know da way
                     {
                         return DeviceOs.Android;
                     }

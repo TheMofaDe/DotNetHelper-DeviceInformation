@@ -16,8 +16,8 @@ public class BuildParameters
 
     public string SolutionDir  {get; private set;} = "./";
     public string ProjectDir   {get; private set;}
-    public string ProjectName  {get; private set;} = "DotNet-Project-Template"; // TODO ::  Configurable per project
-    public string SolutionFileName {get; private set;} = "DotNet-Project-Template.sln"; // TODO ::  Configurable per project
+    public string ProjectName  {get; private set;} = "DotNetHelper-DeviceInformation"; // TODO ::  Configurable per project
+    public string SolutionFileName {get; private set;} = "DotNetHelper-DeviceInformation.sln"; // TODO ::  Configurable per project
 
     public bool EnabledUnitTests { get; private set; }
     public bool EnabledPublishGem { get; private set; }

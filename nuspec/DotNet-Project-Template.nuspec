@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>DotNet-Starter-Template</id>
+    <id>DotNetHelper-DeviceInformation</id>
     <version>$version$</version>
     <title>DotNet-Starter-Template</title>
     <authors>Joseph McNeal Jr and Contributors</authors>
