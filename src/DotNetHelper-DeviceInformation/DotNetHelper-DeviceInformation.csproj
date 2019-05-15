@@ -21,9 +21,8 @@
     <PackageLicenseUrl></PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/TheMofaDe/DotNetHelper-DeviceInformation</RepositoryUrl>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -35,13 +34,6 @@
     <Reference Include="System.Management" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <None Include="..\..\LICENSE.md">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net45' Or '$(TargetFramework)' == 'net452'">
     <DefineConstants>$(DefineConstants);NETFRAMEWORK</DefineConstants>
