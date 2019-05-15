@@ -185,7 +185,7 @@ Task("Generate-Docs")
 {
 	DocFxMetadata("./docs/docfx.json");
 	DocFxBuild("./docs/docfx.json");
-		if(DirectoryExists(parameters.Paths.Directories.Artifacts))
+	if(DirectoryExists(parameters.Paths.Directories.Artifacts))
 	Zip("./docs/_site/", parameters.Paths.Directories.Artifacts + "/docfx.zip");
 });
 
