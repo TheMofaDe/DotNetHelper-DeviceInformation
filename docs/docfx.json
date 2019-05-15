@@ -3,27 +3,10 @@
     {
       "src": [
         {
-          "src": "../",
-          "files": [
-            "src/**.csproj"
-          ],
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "_site/**"
-          ]
+          "files": [ "**.csproj" ],
+          "exclude": [ "**/bin/**", "**/obj/**" ],
+          "src": "../src"
         }
-       //,{
-       //  "src": "../",
-       //  "files": [
-       //    "generics/**.csproj"
-       //  ],
-       //  "exclude": [
-       //    "**/obj/**",
-       //    "**/bin/**",
-       //    "_site/**"
-       //  ]
-       //}
       ],
       "dest": "api",
       "properties": {
@@ -45,32 +28,30 @@
     ],
     "resource": [
       {
-        "files": [ "articles/images/**" ]
+        "files": [ "images/**", "langwordmapping/**" ],
+        "exclude": [ "**.meta" ]
       }
     ],
     "globalMetadata": {
-      "_appTitle": "DotNetHelper-Contracts",
+      "_appTitle": "DotNetHelper-DeviceInformation",
       "_disableContribution": false,
       "_disableBreadcrumb": false,
       "_appFaviconPath": "logo/favicon.ico",
       "_disableNavbar": false,
       "_enableSearch": true,
-   //   "_navRel": "../toc.html",
+      //   "_navRel": "../toc.html",
+      //    "_appLogoPath": "logo/lucene-net-color.png",
       "_appFooter": "Copyright © 2019 Joseph McNeal Jr"
     },
-    "dest": "_site",
+    "dest": "./",
     "globalMetadataFiles": [],
-    "fileMetadataFiles": [],
-    //   "template": [
-    //     "default",
-    //     "lucenetemplate"
-    //   ],
+    "template": [ "statictoc" ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
     "keepFileLink": true,
-    "cleanupCacheHistory": false,
+    "cleanupCacheHistory": true,
     "disableGitFeatures": false
   }
 }

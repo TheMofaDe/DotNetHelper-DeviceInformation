@@ -36,7 +36,7 @@ void SetRubyGemPushApiKey(string apiKey)
 
 GitVersion GetVersion(BuildParameters parameters)
 {
-    var dllFile = GetFiles($"{parameters.ProjectDir}/bin/{parameters.Configuration}/{parameters.StandardFxVersion}/{parameters.ProjectName}.dll").FirstOrDefault();
+    var dllFile = GetFiles($"{MyProject.ProjectDir}/bin/{parameters.Configuration}/{MyProject.TargetFrameworks.First()}/{MyProject.ProjectName}.dll").FirstOrDefault();
     var settings = new GitVersionSettings
     {
         OutputType = GitVersionOutput.Json,
@@ -53,14 +53,15 @@ GitVersion GetVersion(BuildParameters parameters)
 
         GitVersion(settings);
     }else{
-    settings.UpdateAssemblyInfo = true; // TODO :: once we are fully CI implemented remove this code
+        settings.UpdateAssemblyInfo = true;
+	    GitVersion(settings);
     }
     return gitVersion;
 }
 
 void Build(string configuration,string solutionFile)
 {
-    DotNetCoreRestore(solutionFile); // TODO :: update solution file
+    DotNetCoreRestore(solutionFile); 
     MSBuild(solutionFile, settings =>
     {
         settings.SetConfiguration(configuration)
@@ -78,9 +79,8 @@ void DockerBuild(DockerImage dockerImage, BuildParameters parameters)
     var (os, distro, targetframework) = dockerImage;
     var workDir = DirectoryPath.FromString($"./src/Docker/{os}/{distro}/{targetframework}");
 
-    var sourceDir = targetframework.StartsWith("netcoreapp")
-        ? parameters.Paths.Directories.ArtifactsBinCoreFx.Combine("")
-        : parameters.Paths.Directories.ArtifactsBinFullFx.Combine("");
+    var sourceDir = parameters.Paths.Directories.ArtifactsBin.Combine(targetframework);
+
 
     CopyDirectory(sourceDir, workDir.Combine("content"));
 
@@ -141,7 +141,7 @@ void DockerTestRun(DockerContainerRunSettings settings, BuildParameters paramete
 }
 
 string[] GetDockerTags(DockerImage dockerImage, BuildParameters parameters) {
-    var name = $"{parameters.RepositoryOwner}/{parameters.RepositoryName}";
+    var name = $"{MyProject.RepositoryOwner}/{MyProject.RepositoryName}";
     var (os, distro, targetframework) = dockerImage;
 
     var tags = new List<string> {

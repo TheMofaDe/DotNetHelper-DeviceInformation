@@ -1,0 +1,15 @@
+### YamlMime:TableOfContent
+- uid: DotNetHelper_DeviceInformation
+  name: DotNetHelper_DeviceInformation
+  items:
+  - uid: DotNetHelper_DeviceInformation.DeviceInformation
+    name: DeviceInformation
+  - uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+    name: DeviceInformation.DeviceOs
+- uid: DotNetHelper_DeviceInformation.Models
+  name: DotNetHelper_DeviceInformation.Models
+  items:
+  - uid: DotNetHelper_DeviceInformation.Models.DiskDriver
+    name: DiskDriver
+  - uid: DotNetHelper_DeviceInformation.Models.NetworkDriver
+    name: NetworkDriver

@@ -22,8 +22,10 @@
 #tool "nuget:?package=ILRepack&version=2.0.16"
 #tool "nuget:?package=Codecov&version=1.1.0"
 #tool "nuget:?package=nuget.commandline&version=4.9.2"
-#tool "nuget:?package=GitVersion.CommandLine&version=5.0.0-beta2-6" // 4.0.0 - latest stable
+#tool "nuget:?package=GitVersion.CommandLine&version=5.0.0-beta2-95"
 #tool "nuget:?package=docfx.console&version=2.41.0"
+#tool "nuget:?package=WiX.Toolset.UnofficialFork&version=3.11.1"
+//#tool "nuget:?package=WiX.Toolset"
 
 // Install .NET Core Global tools.
 #tool "dotnet:?package=GitReleaseManager.Tool&version=0.8.0"
@@ -46,7 +48,7 @@ Setup<BuildParameters>(context =>
 {
     var parameters = BuildParameters.GetParameters(Context);
 
-    Build(parameters.Configuration,parameters.SolutionFileName);
+    Build(parameters.Configuration,MyProject.SolutionFileName);
     var gitVersion = GetVersion(parameters);
     parameters.Initialize(context, gitVersion);
 
@@ -59,7 +61,7 @@ Setup<BuildParameters>(context =>
         parameters.Version.SemVersion,
         parameters.Configuration,
         parameters.Target,
-        parameters.ProjectName);
+        MyProject.ProjectName);
 
     Information("Repository info : IsMainRepo {0}, IsMainBranch {1}, IsTagged: {2}, IsPullRequest: {3}",
         parameters.IsMainRepo,
@@ -106,8 +108,8 @@ Task("Clean")
 {
     Information("Cleaning directories..");
 
-    CleanDirectories($"{parameters.ProjectDir}bin/" + parameters.Configuration);
-    CleanDirectories($"{parameters.ProjectDir}obj");
+    CleanDirectories($"{MyProject.ProjectDir}bin/" + parameters.Configuration);
+    CleanDirectories($"{MyProject.ProjectDir}obj");
     CleanDirectories(parameters.Paths.Directories.ToClean);
 });
 
@@ -116,7 +118,7 @@ Task("Build")
     .IsDependentOn("Clean")
     .Does<BuildParameters>((parameters) =>
 {
-    Build(parameters.Configuration,parameters.SolutionFileName);
+    Build(parameters.Configuration,MyProject.SolutionFileName);
 });
 
 #endregion
@@ -134,9 +136,10 @@ Task("Test")
     var projects = GetFiles("./src/**/*.Tests.csproj");
     foreach(var project in projects)
     {
+        foreach(var targetFramework in MyProject.TargetFrameworks){
         var settings = new DotNetCoreTestSettings
         {
-            Framework = parameters.FullFxVersion,
+            Framework = targetFramework,
             NoBuild = true,
             NoRestore = true,
             Configuration = parameters.Configuration
@@ -146,7 +149,7 @@ Task("Test")
             CollectCoverage = true,
             CoverletOutputFormat = CoverletOutputFormat.opencover,
             CoverletOutputDirectory = parameters.Paths.Directories.TestCoverageOutput + "/",
-            CoverletOutputName = $"{project.GetFilenameWithoutExtension()}.coverage.xml"
+            CoverletOutputName = $"{project.GetFilenameWithoutExtension()}-{targetFramework}.coverage.xml"
         };
 
         if (IsRunningOnUnix())
@@ -154,12 +157,13 @@ Task("Test")
             settings.Filter = "TestCategory!=NoMono";
         }
 
-        // DotNetCoreTest(project.FullPath, settings, coverletSettings);
-        DotNetCoreTest(project.FullPath, settings);
+        DotNetCoreTest(project.FullPath,  settings, coverletSettings);
+        }
     }
 
+    foreach(var targetFramework in MyProject.TargetFrameworks){
     // run using NUnit
-    var testAssemblies = GetFiles("./src/**/bin/" + parameters.Configuration + "/" + parameters.FullFxVersion + "/*.Tests.dll");
+    var testAssemblies = GetFiles("./src/**/bin/" + parameters.Configuration + "/" + targetFramework + "/*.Tests.dll");
 
     var nunitSettings = new NUnit3Settings
     {
@@ -172,6 +176,7 @@ Task("Test")
     }
 
     NUnit3(testAssemblies, nunitSettings);
+    }
 });
 
 
@@ -180,11 +185,101 @@ Task("Generate-Docs")
 {
 	DocFxMetadata("./docs/docfx.json");
 	DocFxBuild("./docs/docfx.json");
+		if(DirectoryExists(parameters.Paths.Directories.Artifacts))
 	Zip("./docs/_site/", parameters.Paths.Directories.Artifacts + "/docfx.zip");
 });
 
 
 #endregion
+
+//////////////////////////////////////////////////////////////////////
+// Package MSI Tasks
+//////////////////////////////////////////////////////////////////////
+
+Task("Heat")
+  .IsDependentOn("Build")
+   .Does<BuildParameters>((parameters) =>{
+
+
+    foreach(var targetFramework in MyProject.TargetFrameworks){
+    DirectoryPath harvestDirectory = Directory($"{MyProject.ProjectDir}bin/{parameters.Configuration}/{targetFramework}/");
+    var filePath = File("./wix/installer/Components.wxs");
+
+	var heatSettings = new HeatSettings {
+			ArgumentCustomization = args => args.Append("-var var.HeatSourceFilesDir")
+												.Append("-dr AppDir")
+           ,ComponentGroupName = "NetBinComponents"
+	       ,GenerateGuid = true
+		   ,SuppressCom = true
+		   ,SuppressRegistry = true
+		   ,SuppressFragments = true
+		   ,SuppressRootDirectory = true
+		   ,OutputFile = "./wix/installer/Components.wxs"  
+		   ,PreprocessorVariable = "var.HeatSourceFilesDir" 
+        };
+
+    WiXHeat(harvestDirectory, filePath,WiXHarvestType.Dir,heatSettings);
+    }
+  
+  
+  });
+
+
+Task("Candle")
+   .IsDependentOn("Heat") 
+   .Does<BuildParameters>((parameters) =>{
+
+
+    foreach(var targetFramework in MyProject.TargetFrameworks){
+        var files = GetFiles("./wix/**/*.wxs");
+        var settings = new CandleSettings {
+			ArgumentCustomization = args => args
+                .Append("-dHeatSourceFilesDir=" + $"{MyProject.ProjectDir}bin/{parameters.Configuration}/{targetFramework}/")
+			  ,
+            Verbose = true,
+            NoLogo = true,
+            OutputDirectory = parameters.Paths.Directories.ArtifactsBin.Combine(targetFramework),
+		    Defines = new Dictionary<string, string>(){ 
+						 {"SourceDir", parameters.Paths.Directories.ArtifactsBin.Combine(targetFramework).ToString() }
+						 ,{"ProductName",  $"{MyProject.ProjectName}" }
+						 ,{"Version",  $"{parameters.Version.SemVersion}" }
+					     ,{"Manufacturer",  $"{MyProject.Manufacturer}" }
+				  }            
+        };
+
+        WiXCandle(files, settings);
+    }
+  });
+
+Task("Light")
+  .IsDependentOn("Copy-Files")
+  .IsDependentOn("Candle")
+     .Does<BuildParameters>((parameters) =>{
+
+             foreach(var targetFramework in MyProject.TargetFrameworks){
+      LightSettings settings = new LightSettings {
+	  	ArgumentCustomization = args => args
+                .Append("-dHeatSourceFilesDir=" + $"{MyProject.ProjectDir}bin/{parameters.Configuration}/{targetFramework}/")
+                ,
+        Defines = new Dictionary<string, string>(){ 
+						 {"SourceDir", parameters.Paths.Directories.ArtifactsBin.Combine(targetFramework).ToString() }
+						 ,{"ProductName",  $"{MyProject.ProjectName}" }
+						 ,{"Version",  $"{parameters.Version.SemVersion}" }
+					     ,{"Manufacturer",  $"{MyProject.Manufacturer}" }
+				  },
+        OutputFile = parameters.Paths.Directories.Artifacts.ToString() + "/" +  MyProject.ProjectName + "_" + targetFramework +  "_Installer.msi",
+        NoLogo = true,
+     
+        };
+    WiXLight(parameters.Paths.Directories.ArtifactsBin.Combine(targetFramework).ToString() + "/*.wixobj", settings);
+             }
+
+
+
+  });
+
+
+
 
 #region Package
 
@@ -193,13 +288,18 @@ Task("Copy-Files")
     .IsDependentOn("Generate-Docs")
     .Does<BuildParameters>((parameters) =>
 {
+
+    foreach(var targetFramework in MyProject.TargetFrameworks){    
+    
+    var outputDir = parameters.Paths.Directories.ArtifactsBin.Combine(targetFramework);
     // .NET CORE 
-    DotNetCorePublish($"{parameters.ProjectDir}{parameters.ProjectName}.csproj", new DotNetCorePublishSettings
+    DotNetCorePublish($"{MyProject.ProjectDir}{MyProject.ProjectName}.csproj", new DotNetCorePublishSettings
     {
-        Framework = parameters.StandardFxVersion, 
+        Framework = targetFramework, 
         NoRestore = true,
+        NoBuild = false,
         Configuration = parameters.Configuration,
-        OutputDirectory =  parameters.Paths.Directories.ArtifactsBinStandardFx,
+        OutputDirectory =  outputDir,
         MSBuildSettings = parameters.MSBuildSettings
     });
 
@@ -207,30 +307,16 @@ Task("Copy-Files")
     var licenseFile = "./LICENSE";
     if (FileExists($"{licenseFile}"))
     {
-      CopyFileToDirectory($"{licenseFile}",  parameters.Paths.Directories.ArtifactsBinCoreFx);
+      CopyFileToDirectory($"{licenseFile}",  outputDir);
     }
-    var xmlFile = $"{parameters.ProjectDir}bin/{parameters.Configuration}/{parameters.CoreFxVersion}/{parameters.ProjectName}.xml";
+
+    var xmlFile = $"{MyProject.ProjectDir}bin/{parameters.Configuration}/{targetFramework}/{MyProject.ProjectName}.xml";
     if (FileExists($"{xmlFile}"))
     {
-      CopyFileToDirectory($"{xmlFile}",  parameters.Paths.Directories.ArtifactsBinCoreFx);
+      CopyFileToDirectory($"{xmlFile}",  outputDir);
     }
-    
 
-    // .NET FRAMEWORK
-    DotNetCorePublish($"{parameters.ProjectDir}{parameters.ProjectName}.csproj", new DotNetCorePublishSettings
-    {
-        Framework = parameters.FullFxVersion,
-        NoBuild = true,
-        NoRestore = true,
-        Configuration = parameters.Configuration,
-        OutputDirectory = parameters.Paths.Directories.ArtifactsBinFullFx,
-        MSBuildSettings = parameters.MSBuildSettings
-    });
-
-
-
-    
-
+    }
 });
 
 
@@ -287,8 +373,8 @@ Task("Pack-Nuget")
     };
 
 
-    DotNetCorePack($"{parameters.ProjectDir}", settings);
-    // DotNetCorePack($"{parameters.ProjectDir}{parameters.ProjectName}.csproj", settings);
+    DotNetCorePack($"{MyProject.ProjectDir}", settings);
+    // DotNetCorePack($"{MyProject.ProjectDir}{MyProject.ProjectName}.csproj", settings);
 });
 
 Task("Pack-Chocolatey")
@@ -321,22 +407,15 @@ Task("Zip-Files")
     .IsDependentOn("Copy-Files")
     .Does<BuildParameters>((parameters) =>
 {
-    // .NET Framework
-    var fullFxDir = parameters.Paths.Directories.ArtifactsBinFullFx.Combine("");
+
+    foreach(var targetFramework in MyProject.TargetFrameworks){   
+
+    var filename = parameters.Paths.Directories.Artifacts.CombineWithFilePath(MyProject.ProjectName) + "-bin-" + targetFramework + "fx-v" + parameters.Version.SemVersion + ".zip";
+    var fullFxDir = parameters.Paths.Directories.ArtifactsBin.Combine(targetFramework);
     var fullFxFiles = GetFiles(fullFxDir.FullPath + "/**/*");
-    Zip(fullFxDir, parameters.Paths.Files.ZipArtifactPathDesktop, fullFxFiles);
-
-    // .NET Core
-    var coreFxDir = parameters.Paths.Directories.ArtifactsBinCoreFx.Combine("");
-    var coreclrFiles = GetFiles(coreFxDir.FullPath + "/**/*");
-    Zip(coreFxDir, parameters.Paths.Files.ZipArtifactPathCoreClr, coreclrFiles);
-
-
-     // .NET Standard
-    var standardFxDir = parameters.Paths.Directories.ArtifactsBinStandardFx.Combine("");
-    var standardFxFiles = GetFiles(standardFxDir.FullPath + "/**/*");
-    Zip(standardFxDir, parameters.Paths.Files.ZipArtifactPathCoreClr, standardFxFiles);
-
+    Zip(fullFxDir, filename, fullFxFiles);
+   
+    }
 
 
 
@@ -418,9 +497,9 @@ Task("Pack")
 #region Publish
 
 Task("Release-Notes")
-   // .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnWindows,       "Release notes are generated only on Windows agents.")
-   // .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnAzurePipeline, "Release notes are generated only on AzurePipeline.")
-   // .WithCriteria<BuildParameters>((context, parameters) => parameters.IsStableRelease(),        "Release notes are generated only for stable releases.")
+    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnWindows,       "Release notes are generated only on Windows agents.")
+    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnAppVeyor, "Release notes are generated only on AppVeyor.")
+    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsStableRelease(),        "Release notes are generated only for stable releases.")
     .Does<BuildParameters>((parameters) =>
 {
      var releaseNotesExitCode = StartProcess(@"tools\GitReleaseNotes.0.7.1\tools\GitReleaseNotes.exe", new ProcessSettings { Arguments = ". /o RELEASENOTES.md" });
@@ -438,7 +517,7 @@ Task("Release-Notes")
 
 Task("Publish-Coverage")
     .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnWindows,       "Publish-Coverage works only on Windows agents.")
-    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnAzurePipeline, "Publish-Coverage works only on AzurePipeline.")
+    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnAppVeyor, "Publish-Coverage works only on AppVeyor.")
     .WithCriteria<BuildParameters>((context, parameters) => parameters.IsStableRelease() || parameters.IsPreRelease(), "Publish-Coverage works only for releases.")
     .IsDependentOn("Test")
     .Does<BuildParameters>((parameters) =>
@@ -566,8 +645,8 @@ Task("Publish-DockerHub")
 Task("Publish-NuGet")
     .WithCriteria<BuildParameters>((context, parameters) => parameters.EnabledPublishNuget,      "Publish-NuGet was disabled.")
     .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnWindows,       "Publish-NuGet works only on Windows agents.")
-    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnAzurePipeline, "Publish-NuGet works only on AzurePipeline.")
-    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsStableRelease() || parameters.IsPreRelease(), "Publish-NuGet works only for releases.")
+    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnAppVeyor, "Publish-NuGet works only on AzurePipeline.")
+    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsStableRelease() || parameters.IsPreRelease() || parameters.IsMasterBranch, "Publish-NuGet works only for releases.")
     .IsDependentOn("Pack-NuGet")
     .Does<BuildParameters>((parameters) =>
 {
@@ -647,6 +726,7 @@ Task("Publish")
     .IsDependentOn("Publish-NuGet")
     .IsDependentOn("Publish-Chocolatey")
     .IsDependentOn("Publish-DockerHub")
+//  .IsDependentOn("Light")
     .Finally(() =>
 {
     if (publishingError)

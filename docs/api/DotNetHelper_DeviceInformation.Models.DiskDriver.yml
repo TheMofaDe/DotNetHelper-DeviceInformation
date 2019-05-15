@@ -1,0 +1,529 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper_DeviceInformation.Models.DiskDriver
+  commentId: T:DotNetHelper_DeviceInformation.Models.DiskDriver
+  id: DiskDriver
+  parent: DotNetHelper_DeviceInformation.Models
+  children:
+  - DotNetHelper_DeviceInformation.Models.DiskDriver.DriveLetter
+  - DotNetHelper_DeviceInformation.Models.DiskDriver.InterfaceType
+  - DotNetHelper_DeviceInformation.Models.DiskDriver.Model
+  - DotNetHelper_DeviceInformation.Models.DiskDriver.SerialNumber
+  langs:
+  - csharp
+  - vb
+  name: DiskDriver
+  nameWithType: DiskDriver
+  fullName: DotNetHelper_DeviceInformation.Models.DiskDriver
+  type: Class
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/DiskDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: DiskDriver
+    path: ../src/DotNetHelper-DeviceInformation/Models/DiskDriver.cs
+    startLine: 2
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  syntax:
+    content: public class DiskDriver
+    content.vb: Public Class DiskDriver
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: DotNetHelper_DeviceInformation.Models.DiskDriver.SerialNumber
+  commentId: P:DotNetHelper_DeviceInformation.Models.DiskDriver.SerialNumber
+  id: SerialNumber
+  parent: DotNetHelper_DeviceInformation.Models.DiskDriver
+  langs:
+  - csharp
+  - vb
+  name: SerialNumber
+  nameWithType: DiskDriver.SerialNumber
+  fullName: DotNetHelper_DeviceInformation.Models.DiskDriver.SerialNumber
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/DiskDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: SerialNumber
+    path: ../src/DotNetHelper-DeviceInformation/Models/DiskDriver.cs
+    startLine: 7
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string SerialNumber { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SerialNumber As String
+  overload: DotNetHelper_DeviceInformation.Models.DiskDriver.SerialNumber*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: DotNetHelper_DeviceInformation.Models.DiskDriver.Model
+  commentId: P:DotNetHelper_DeviceInformation.Models.DiskDriver.Model
+  id: Model
+  parent: DotNetHelper_DeviceInformation.Models.DiskDriver
+  langs:
+  - csharp
+  - vb
+  name: Model
+  nameWithType: DiskDriver.Model
+  fullName: DotNetHelper_DeviceInformation.Models.DiskDriver.Model
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/DiskDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: Model
+    path: ../src/DotNetHelper-DeviceInformation/Models/DiskDriver.cs
+    startLine: 11
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string Model { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Model As String
+  overload: DotNetHelper_DeviceInformation.Models.DiskDriver.Model*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: DotNetHelper_DeviceInformation.Models.DiskDriver.InterfaceType
+  commentId: P:DotNetHelper_DeviceInformation.Models.DiskDriver.InterfaceType
+  id: InterfaceType
+  parent: DotNetHelper_DeviceInformation.Models.DiskDriver
+  langs:
+  - csharp
+  - vb
+  name: InterfaceType
+  nameWithType: DiskDriver.InterfaceType
+  fullName: DotNetHelper_DeviceInformation.Models.DiskDriver.InterfaceType
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/DiskDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: InterfaceType
+    path: ../src/DotNetHelper-DeviceInformation/Models/DiskDriver.cs
+    startLine: 15
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string InterfaceType { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property InterfaceType As String
+  overload: DotNetHelper_DeviceInformation.Models.DiskDriver.InterfaceType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: DotNetHelper_DeviceInformation.Models.DiskDriver.DriveLetter
+  commentId: P:DotNetHelper_DeviceInformation.Models.DiskDriver.DriveLetter
+  id: DriveLetter
+  parent: DotNetHelper_DeviceInformation.Models.DiskDriver
+  langs:
+  - csharp
+  - vb
+  name: DriveLetter
+  nameWithType: DiskDriver.DriveLetter
+  fullName: DotNetHelper_DeviceInformation.Models.DiskDriver.DriveLetter
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/DiskDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: DriveLetter
+    path: ../src/DotNetHelper-DeviceInformation/Models/DiskDriver.cs
+    startLine: 19
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string DriveLetter { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DriveLetter As String
+  overload: DotNetHelper_DeviceInformation.Models.DiskDriver.DriveLetter*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: DotNetHelper_DeviceInformation.Models
+  commentId: N:DotNetHelper_DeviceInformation.Models
+  name: DotNetHelper_DeviceInformation.Models
+  nameWithType: DotNetHelper_DeviceInformation.Models
+  fullName: DotNetHelper_DeviceInformation.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotNetHelper_DeviceInformation.Models.DiskDriver.SerialNumber*
+  commentId: Overload:DotNetHelper_DeviceInformation.Models.DiskDriver.SerialNumber
+  name: SerialNumber
+  nameWithType: DiskDriver.SerialNumber
+  fullName: DotNetHelper_DeviceInformation.Models.DiskDriver.SerialNumber
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DotNetHelper_DeviceInformation.Models.DiskDriver.Model*
+  commentId: Overload:DotNetHelper_DeviceInformation.Models.DiskDriver.Model
+  name: Model
+  nameWithType: DiskDriver.Model
+  fullName: DotNetHelper_DeviceInformation.Models.DiskDriver.Model
+- uid: DotNetHelper_DeviceInformation.Models.DiskDriver.InterfaceType*
+  commentId: Overload:DotNetHelper_DeviceInformation.Models.DiskDriver.InterfaceType
+  name: InterfaceType
+  nameWithType: DiskDriver.InterfaceType
+  fullName: DotNetHelper_DeviceInformation.Models.DiskDriver.InterfaceType
+- uid: DotNetHelper_DeviceInformation.Models.DiskDriver.DriveLetter*
+  commentId: Overload:DotNetHelper_DeviceInformation.Models.DiskDriver.DriveLetter
+  name: DriveLetter
+  nameWithType: DiskDriver.DriveLetter
+  fullName: DotNetHelper_DeviceInformation.Models.DiskDriver.DriveLetter

@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper_DeviceInformation.Models
+  commentId: N:DotNetHelper_DeviceInformation.Models
+  id: DotNetHelper_DeviceInformation.Models
+  children:
+  - DotNetHelper_DeviceInformation.Models.DiskDriver
+  - DotNetHelper_DeviceInformation.Models.NetworkDriver
+  langs:
+  - csharp
+  - vb
+  name: DotNetHelper_DeviceInformation.Models
+  nameWithType: DotNetHelper_DeviceInformation.Models
+  fullName: DotNetHelper_DeviceInformation.Models
+  type: Namespace
+  assemblies:
+  - DotNetHelper-DeviceInformation
+references:
+- uid: DotNetHelper_DeviceInformation.Models.DiskDriver
+  commentId: T:DotNetHelper_DeviceInformation.Models.DiskDriver
+  name: DiskDriver
+  nameWithType: DiskDriver
+  fullName: DotNetHelper_DeviceInformation.Models.DiskDriver
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver
+  commentId: T:DotNetHelper_DeviceInformation.Models.NetworkDriver
+  name: NetworkDriver
+  nameWithType: NetworkDriver
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver

@@ -1,0 +1,742 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver
+  commentId: T:DotNetHelper_DeviceInformation.Models.NetworkDriver
+  id: NetworkDriver
+  parent: DotNetHelper_DeviceInformation.Models
+  children:
+  - DotNetHelper_DeviceInformation.Models.NetworkDriver.Caption
+  - DotNetHelper_DeviceInformation.Models.NetworkDriver.DefaultIpGateway
+  - DotNetHelper_DeviceInformation.Models.NetworkDriver.Description
+  - DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpEnabled
+  - DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpServer
+  - DotNetHelper_DeviceInformation.Models.NetworkDriver.IpAddress
+  - DotNetHelper_DeviceInformation.Models.NetworkDriver.MacAddress
+  - DotNetHelper_DeviceInformation.Models.NetworkDriver.ServiceName
+  langs:
+  - csharp
+  - vb
+  name: NetworkDriver
+  nameWithType: NetworkDriver
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver
+  type: Class
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: NetworkDriver
+    path: ../src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+    startLine: 2
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  syntax:
+    content: public class NetworkDriver
+    content.vb: Public Class NetworkDriver
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.MacAddress
+  commentId: P:DotNetHelper_DeviceInformation.Models.NetworkDriver.MacAddress
+  id: MacAddress
+  parent: DotNetHelper_DeviceInformation.Models.NetworkDriver
+  langs:
+  - csharp
+  - vb
+  name: MacAddress
+  nameWithType: NetworkDriver.MacAddress
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.MacAddress
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: MacAddress
+    path: ../src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+    startLine: 7
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string MacAddress { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MacAddress As String
+  overload: DotNetHelper_DeviceInformation.Models.NetworkDriver.MacAddress*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.Description
+  commentId: P:DotNetHelper_DeviceInformation.Models.NetworkDriver.Description
+  id: Description
+  parent: DotNetHelper_DeviceInformation.Models.NetworkDriver
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: NetworkDriver.Description
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.Description
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: Description
+    path: ../src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+    startLine: 11
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: DotNetHelper_DeviceInformation.Models.NetworkDriver.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpEnabled
+  commentId: P:DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpEnabled
+  id: DhcpEnabled
+  parent: DotNetHelper_DeviceInformation.Models.NetworkDriver
+  langs:
+  - csharp
+  - vb
+  name: DhcpEnabled
+  nameWithType: NetworkDriver.DhcpEnabled
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpEnabled
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: DhcpEnabled
+    path: ../src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+    startLine: 15
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public bool DhcpEnabled { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DhcpEnabled As Boolean
+  overload: DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpServer
+  commentId: P:DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpServer
+  id: DhcpServer
+  parent: DotNetHelper_DeviceInformation.Models.NetworkDriver
+  langs:
+  - csharp
+  - vb
+  name: DhcpServer
+  nameWithType: NetworkDriver.DhcpServer
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpServer
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: DhcpServer
+    path: ../src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+    startLine: 19
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string DhcpServer { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DhcpServer As String
+  overload: DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpServer*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.ServiceName
+  commentId: P:DotNetHelper_DeviceInformation.Models.NetworkDriver.ServiceName
+  id: ServiceName
+  parent: DotNetHelper_DeviceInformation.Models.NetworkDriver
+  langs:
+  - csharp
+  - vb
+  name: ServiceName
+  nameWithType: NetworkDriver.ServiceName
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.ServiceName
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: ServiceName
+    path: ../src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+    startLine: 23
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string ServiceName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ServiceName As String
+  overload: DotNetHelper_DeviceInformation.Models.NetworkDriver.ServiceName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.Caption
+  commentId: P:DotNetHelper_DeviceInformation.Models.NetworkDriver.Caption
+  id: Caption
+  parent: DotNetHelper_DeviceInformation.Models.NetworkDriver
+  langs:
+  - csharp
+  - vb
+  name: Caption
+  nameWithType: NetworkDriver.Caption
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.Caption
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: Caption
+    path: ../src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+    startLine: 27
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string Caption { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Caption As String
+  overload: DotNetHelper_DeviceInformation.Models.NetworkDriver.Caption*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.IpAddress
+  commentId: P:DotNetHelper_DeviceInformation.Models.NetworkDriver.IpAddress
+  id: IpAddress
+  parent: DotNetHelper_DeviceInformation.Models.NetworkDriver
+  langs:
+  - csharp
+  - vb
+  name: IpAddress
+  nameWithType: NetworkDriver.IpAddress
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.IpAddress
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: IpAddress
+    path: ../src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+    startLine: 31
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string[] IpAddress { get; protected set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Public Property IpAddress As String()
+  overload: DotNetHelper_DeviceInformation.Models.NetworkDriver.IpAddress*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.DefaultIpGateway
+  commentId: P:DotNetHelper_DeviceInformation.Models.NetworkDriver.DefaultIpGateway
+  id: DefaultIpGateway
+  parent: DotNetHelper_DeviceInformation.Models.NetworkDriver
+  langs:
+  - csharp
+  - vb
+  name: DefaultIpGateway
+  nameWithType: NetworkDriver.DefaultIpGateway
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.DefaultIpGateway
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: DefaultIpGateway
+    path: ../src/DotNetHelper-DeviceInformation/Models/NetworkDriver.cs
+    startLine: 35
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation.Models
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string[] DefaultIpGateway { get; protected set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Public Property DefaultIpGateway As String()
+  overload: DotNetHelper_DeviceInformation.Models.NetworkDriver.DefaultIpGateway*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: DotNetHelper_DeviceInformation.Models
+  commentId: N:DotNetHelper_DeviceInformation.Models
+  name: DotNetHelper_DeviceInformation.Models
+  nameWithType: DotNetHelper_DeviceInformation.Models
+  fullName: DotNetHelper_DeviceInformation.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.MacAddress*
+  commentId: Overload:DotNetHelper_DeviceInformation.Models.NetworkDriver.MacAddress
+  name: MacAddress
+  nameWithType: NetworkDriver.MacAddress
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.MacAddress
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.Description*
+  commentId: Overload:DotNetHelper_DeviceInformation.Models.NetworkDriver.Description
+  name: Description
+  nameWithType: NetworkDriver.Description
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.Description
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpEnabled*
+  commentId: Overload:DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpEnabled
+  name: DhcpEnabled
+  nameWithType: NetworkDriver.DhcpEnabled
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpEnabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpServer*
+  commentId: Overload:DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpServer
+  name: DhcpServer
+  nameWithType: NetworkDriver.DhcpServer
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.DhcpServer
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.ServiceName*
+  commentId: Overload:DotNetHelper_DeviceInformation.Models.NetworkDriver.ServiceName
+  name: ServiceName
+  nameWithType: NetworkDriver.ServiceName
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.ServiceName
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.Caption*
+  commentId: Overload:DotNetHelper_DeviceInformation.Models.NetworkDriver.Caption
+  name: Caption
+  nameWithType: NetworkDriver.Caption
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.Caption
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.IpAddress*
+  commentId: Overload:DotNetHelper_DeviceInformation.Models.NetworkDriver.IpAddress
+  name: IpAddress
+  nameWithType: NetworkDriver.IpAddress
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.IpAddress
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: DotNetHelper_DeviceInformation.Models.NetworkDriver.DefaultIpGateway*
+  commentId: Overload:DotNetHelper_DeviceInformation.Models.NetworkDriver.DefaultIpGateway
+  name: DefaultIpGateway
+  nameWithType: NetworkDriver.DefaultIpGateway
+  fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver.DefaultIpGateway

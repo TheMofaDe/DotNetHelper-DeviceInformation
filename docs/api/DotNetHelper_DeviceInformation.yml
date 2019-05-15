@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper_DeviceInformation
+  commentId: N:DotNetHelper_DeviceInformation
+  id: DotNetHelper_DeviceInformation
+  children:
+  - DotNetHelper_DeviceInformation.DeviceInformation
+  - DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  langs:
+  - csharp
+  - vb
+  name: DotNetHelper_DeviceInformation
+  nameWithType: DotNetHelper_DeviceInformation
+  fullName: DotNetHelper_DeviceInformation
+  type: Namespace
+  assemblies:
+  - DotNetHelper-DeviceInformation
+references:
+- uid: DotNetHelper_DeviceInformation.DeviceInformation
+  commentId: T:DotNetHelper_DeviceInformation.DeviceInformation
+  name: DeviceInformation
+  nameWithType: DeviceInformation
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  commentId: T:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  parent: DotNetHelper_DeviceInformation
+  name: DeviceInformation.DeviceOs
+  nameWithType: DeviceInformation.DeviceOs
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+- uid: DotNetHelper_DeviceInformation
+  commentId: N:DotNetHelper_DeviceInformation
+  name: DotNetHelper_DeviceInformation
+  nameWithType: DotNetHelper_DeviceInformation
+  fullName: DotNetHelper_DeviceInformation

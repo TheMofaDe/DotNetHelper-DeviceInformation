@@ -1,0 +1,1135 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper_DeviceInformation.DeviceInformation
+  commentId: T:DotNetHelper_DeviceInformation.DeviceInformation
+  id: DeviceInformation
+  parent: DotNetHelper_DeviceInformation
+  children:
+  - DotNetHelper_DeviceInformation.DeviceInformation.Architecture
+  - DotNetHelper_DeviceInformation.DeviceInformation.DeviceHeight
+  - DotNetHelper_DeviceInformation.DeviceInformation.DeviceId
+  - DotNetHelper_DeviceInformation.DeviceInformation.DeviceOS
+  - DotNetHelper_DeviceInformation.DeviceInformation.DeviceWidth
+  - DotNetHelper_DeviceInformation.DeviceInformation.DiskDrivers
+  - DotNetHelper_DeviceInformation.DeviceInformation.GetDeviceOs
+  - DotNetHelper_DeviceInformation.DeviceInformation.MachineName
+  - DotNetHelper_DeviceInformation.DeviceInformation.Manufacturer
+  - DotNetHelper_DeviceInformation.DeviceInformation.Model
+  - DotNetHelper_DeviceInformation.DeviceInformation.NetworkDrivers
+  - DotNetHelper_DeviceInformation.DeviceInformation.OsDescription
+  - DotNetHelper_DeviceInformation.DeviceInformation.Platform
+  - DotNetHelper_DeviceInformation.DeviceInformation.Version
+  langs:
+  - csharp
+  - vb
+  name: DeviceInformation
+  nameWithType: DeviceInformation
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation
+  type: Class
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: DeviceInformation
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 16
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nA static class used to determine the device/machine system information\n"
+  example: []
+  syntax:
+    content: public static class DeviceInformation
+    content.vb: Public Module DeviceInformation
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceId
+  commentId: P:DotNetHelper_DeviceInformation.DeviceInformation.DeviceId
+  id: DeviceId
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: DeviceId
+  nameWithType: DeviceInformation.DeviceId
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceId
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: DeviceId
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 23
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets the device identifier.\n"
+  example: []
+  syntax:
+    content: public static string DeviceId { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The device identifier.
+    content.vb: Public Shared ReadOnly Property DeviceId As String
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.DeviceId*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.Model
+  commentId: P:DotNetHelper_DeviceInformation.DeviceInformation.Model
+  id: Model
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: Model
+  nameWithType: DeviceInformation.Model
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.Model
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: Model
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 28
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets The Device Model.\n"
+  example: []
+  syntax:
+    content: public static string Model { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The model.
+    content.vb: Public Shared ReadOnly Property Model As String
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.Model*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.MachineName
+  commentId: P:DotNetHelper_DeviceInformation.DeviceInformation.MachineName
+  id: MachineName
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: MachineName
+  nameWithType: DeviceInformation.MachineName
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.MachineName
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: MachineName
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 33
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets the name of the machine.\n"
+  example: []
+  syntax:
+    content: public static string MachineName { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The name of the machine.
+    content.vb: Public Shared ReadOnly Property MachineName As String
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.MachineName*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.NetworkDrivers
+  commentId: P:DotNetHelper_DeviceInformation.DeviceInformation.NetworkDrivers
+  id: NetworkDrivers
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: NetworkDrivers
+  nameWithType: DeviceInformation.NetworkDrivers
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.NetworkDrivers
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: NetworkDrivers
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 38
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets the network drivers.\n"
+  example: []
+  syntax:
+    content: public static List<NetworkDriver> NetworkDrivers { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{DotNetHelper_DeviceInformation.Models.NetworkDriver}
+      description: The network drivers.
+    content.vb: Public Shared ReadOnly Property NetworkDrivers As List(Of NetworkDriver)
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.NetworkDrivers*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DiskDrivers
+  commentId: P:DotNetHelper_DeviceInformation.DeviceInformation.DiskDrivers
+  id: DiskDrivers
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: DiskDrivers
+  nameWithType: DeviceInformation.DiskDrivers
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DiskDrivers
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: DiskDrivers
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 43
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets the disk drivers.\n"
+  example: []
+  syntax:
+    content: public static List<DiskDriver> DiskDrivers { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{DotNetHelper_DeviceInformation.Models.DiskDriver}
+      description: The disk drivers.
+    content.vb: Public Shared ReadOnly Property DiskDrivers As List(Of DiskDriver)
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.DiskDrivers*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOS
+  commentId: P:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOS
+  id: DeviceOS
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: DeviceOS
+  nameWithType: DeviceInformation.DeviceOS
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOS
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: DeviceOS
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 48
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets the device os.\n"
+  example: []
+  syntax:
+    content: public static DeviceInformation.DeviceOs DeviceOS { get; }
+    parameters: []
+    return:
+      type: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+      description: The device os.
+    content.vb: Public Shared ReadOnly Property DeviceOS As DeviceInformation.DeviceOs
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOS*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.Platform
+  commentId: P:DotNetHelper_DeviceInformation.DeviceInformation.Platform
+  id: Platform
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: Platform
+  nameWithType: DeviceInformation.Platform
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.Platform
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: Platform
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 53
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets the platform.\n"
+  example: []
+  syntax:
+    content: public static string Platform { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The platform.
+    content.vb: Public Shared ReadOnly Property Platform As String
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.Platform*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.Version
+  commentId: P:DotNetHelper_DeviceInformation.DeviceInformation.Version
+  id: Version
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: DeviceInformation.Version
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.Version
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: Version
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 58
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets or sets the version.\n"
+  example: []
+  syntax:
+    content: public static string Version { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The version.
+    content.vb: Public Shared Property Version As String
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.Version*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.OsDescription
+  commentId: P:DotNetHelper_DeviceInformation.DeviceInformation.OsDescription
+  id: OsDescription
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: OsDescription
+  nameWithType: DeviceInformation.OsDescription
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.OsDescription
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: OsDescription
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 68
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets the os description.\n"
+  example: []
+  syntax:
+    content: public static string OsDescription { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The os description.
+    content.vb: Public Shared ReadOnly Property OsDescription As String
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.OsDescription*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.Architecture
+  commentId: P:DotNetHelper_DeviceInformation.DeviceInformation.Architecture
+  id: Architecture
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: Architecture
+  nameWithType: DeviceInformation.Architecture
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.Architecture
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: Architecture
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 73
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets the CPU architecture. \n"
+  example: []
+  syntax:
+    content: public static string Architecture { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The architecture.
+    content.vb: Public Shared ReadOnly Property Architecture As String
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.Architecture*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.Manufacturer
+  commentId: P:DotNetHelper_DeviceInformation.DeviceInformation.Manufacturer
+  id: Manufacturer
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: Manufacturer
+  nameWithType: DeviceInformation.Manufacturer
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.Manufacturer
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: Manufacturer
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 78
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets or sets the manufacturer.\n"
+  example: []
+  syntax:
+    content: public static string Manufacturer { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The manufacturer.
+    content.vb: Public Shared Property Manufacturer As String
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.Manufacturer*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceHeight
+  commentId: P:DotNetHelper_DeviceInformation.DeviceInformation.DeviceHeight
+  id: DeviceHeight
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: DeviceHeight
+  nameWithType: DeviceInformation.DeviceHeight
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceHeight
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: DeviceHeight
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 88
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets the height of the device.\n"
+  example: []
+  syntax:
+    content: public static int DeviceHeight { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The height of the device.
+    content.vb: Public Shared ReadOnly Property DeviceHeight As Integer
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.DeviceHeight*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceWidth
+  commentId: P:DotNetHelper_DeviceInformation.DeviceInformation.DeviceWidth
+  id: DeviceWidth
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: DeviceWidth
+  nameWithType: DeviceInformation.DeviceWidth
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceWidth
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: DeviceWidth
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 93
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets the width of the device.\n"
+  example: []
+  syntax:
+    content: public static int DeviceWidth { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The width of the device.
+    content.vb: Public Shared ReadOnly Property DeviceWidth As Integer
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.DeviceWidth*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.GetDeviceOs
+  commentId: M:DotNetHelper_DeviceInformation.DeviceInformation.GetDeviceOs
+  id: GetDeviceOs
+  parent: DotNetHelper_DeviceInformation.DeviceInformation
+  langs:
+  - csharp
+  - vb
+  name: GetDeviceOs()
+  nameWithType: DeviceInformation.GetDeviceOs()
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.GetDeviceOs()
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: GetDeviceOs
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 314
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nGets the device os.\n"
+  example: []
+  syntax:
+    content: public static DeviceInformation.DeviceOs GetDeviceOs()
+    return:
+      type: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+      description: DeviceOs.
+    content.vb: Public Shared Function GetDeviceOs As DeviceInformation.DeviceOs
+  overload: DotNetHelper_DeviceInformation.DeviceInformation.GetDeviceOs*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: DotNetHelper_DeviceInformation
+  commentId: N:DotNetHelper_DeviceInformation
+  name: DotNetHelper_DeviceInformation
+  nameWithType: DotNetHelper_DeviceInformation
+  fullName: DotNetHelper_DeviceInformation
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceId*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.DeviceId
+  name: DeviceId
+  nameWithType: DeviceInformation.DeviceId
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.Model*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.Model
+  name: Model
+  nameWithType: DeviceInformation.Model
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.Model
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.MachineName*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.MachineName
+  name: MachineName
+  nameWithType: DeviceInformation.MachineName
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.MachineName
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.NetworkDrivers*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.NetworkDrivers
+  name: NetworkDrivers
+  nameWithType: DeviceInformation.NetworkDrivers
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.NetworkDrivers
+- uid: System.Collections.Generic.List{DotNetHelper_DeviceInformation.Models.NetworkDriver}
+  commentId: T:System.Collections.Generic.List{DotNetHelper_DeviceInformation.Models.NetworkDriver}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<NetworkDriver>
+  nameWithType: List<NetworkDriver>
+  fullName: System.Collections.Generic.List<DotNetHelper_DeviceInformation.Models.NetworkDriver>
+  nameWithType.vb: List(Of NetworkDriver)
+  fullName.vb: System.Collections.Generic.List(Of DotNetHelper_DeviceInformation.Models.NetworkDriver)
+  name.vb: List(Of NetworkDriver)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DotNetHelper_DeviceInformation.Models.NetworkDriver
+    name: NetworkDriver
+    nameWithType: NetworkDriver
+    fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DotNetHelper_DeviceInformation.Models.NetworkDriver
+    name: NetworkDriver
+    nameWithType: NetworkDriver
+    fullName: DotNetHelper_DeviceInformation.Models.NetworkDriver
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DiskDrivers*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.DiskDrivers
+  name: DiskDrivers
+  nameWithType: DeviceInformation.DiskDrivers
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DiskDrivers
+- uid: System.Collections.Generic.List{DotNetHelper_DeviceInformation.Models.DiskDriver}
+  commentId: T:System.Collections.Generic.List{DotNetHelper_DeviceInformation.Models.DiskDriver}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<DiskDriver>
+  nameWithType: List<DiskDriver>
+  fullName: System.Collections.Generic.List<DotNetHelper_DeviceInformation.Models.DiskDriver>
+  nameWithType.vb: List(Of DiskDriver)
+  fullName.vb: System.Collections.Generic.List(Of DotNetHelper_DeviceInformation.Models.DiskDriver)
+  name.vb: List(Of DiskDriver)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DotNetHelper_DeviceInformation.Models.DiskDriver
+    name: DiskDriver
+    nameWithType: DiskDriver
+    fullName: DotNetHelper_DeviceInformation.Models.DiskDriver
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DotNetHelper_DeviceInformation.Models.DiskDriver
+    name: DiskDriver
+    nameWithType: DiskDriver
+    fullName: DotNetHelper_DeviceInformation.Models.DiskDriver
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOS*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOS
+  name: DeviceOS
+  nameWithType: DeviceInformation.DeviceOS
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOS
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  commentId: T:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  parent: DotNetHelper_DeviceInformation
+  name: DeviceInformation.DeviceOs
+  nameWithType: DeviceInformation.DeviceOs
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.Platform*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.Platform
+  name: Platform
+  nameWithType: DeviceInformation.Platform
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.Platform
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.Version*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.Version
+  name: Version
+  nameWithType: DeviceInformation.Version
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.Version
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.OsDescription*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.OsDescription
+  name: OsDescription
+  nameWithType: DeviceInformation.OsDescription
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.OsDescription
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.Architecture*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.Architecture
+  name: Architecture
+  nameWithType: DeviceInformation.Architecture
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.Architecture
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.Manufacturer*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.Manufacturer
+  name: Manufacturer
+  nameWithType: DeviceInformation.Manufacturer
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.Manufacturer
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceHeight*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.DeviceHeight
+  name: DeviceHeight
+  nameWithType: DeviceInformation.DeviceHeight
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceHeight
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceWidth*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.DeviceWidth
+  name: DeviceWidth
+  nameWithType: DeviceInformation.DeviceWidth
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceWidth
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.GetDeviceOs*
+  commentId: Overload:DotNetHelper_DeviceInformation.DeviceInformation.GetDeviceOs
+  name: GetDeviceOs
+  nameWithType: DeviceInformation.GetDeviceOs
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.GetDeviceOs

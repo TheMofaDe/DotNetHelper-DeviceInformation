@@ -1,8 +1,10 @@
+#load "./project.cake"
+
 public class BuildPaths
 {
     public BuildFiles Files { get; private set; }
     public BuildDirectories Directories { get; private set; }
-
+    
     public static BuildPaths GetPaths(
         ICakeContext context,
         BuildParameters parameters,
@@ -27,20 +29,18 @@ public class BuildPaths
 
         var artifactsDir                  = (DirectoryPath)(context.Directory("./artifacts") + context.Directory("v" + semVersion));
         var artifactsBinDir               = artifactsDir.Combine("bin");
-        var artifactsBinFullFxDir         = artifactsBinDir.Combine("net452");  // TODO :: Configurable per project. enter the framework your targeting
-        var artifactsBinFullFxILMergeDir  = artifactsBinFullFxDir.Combine("il-merge");
-        var artifactsBinFullFxPortableDir = artifactsBinFullFxDir.Combine("portable");
-        var artifactsBinFullFxCmdlineDir  = artifactsBinFullFxDir.Combine("cmdline");
-        var artifactsBinCoreFxDir         = artifactsBinDir.Combine("netcoreapp2.0");  // TODO :: Configurable per project. enter the framework your targeting
-        var artifactsBinStandardFxDir     = artifactsBinDir.Combine("netstandard2.0");  // TODO :: Configurable per project. enter the framework your targeting
+     //   var artifactsBinFullFxDir         = artifactsBinDir.Combine("net452");  // TODO :: Configurable per project. enter the framework your targeting
+     //   var artifactsBinFullFxILMergeDir  = artifactsBinFullFxDir.Combine("il-merge");
+     //   var artifactsBinFullFxPortableDir = artifactsBinFullFxDir.Combine("portable");
+     //   var artifactsBinFullFxCmdlineDir  = artifactsBinFullFxDir.Combine("cmdline");
         var nugetRootDir                  = artifactsDir.Combine("nuget");
         var buildArtifactDir              = artifactsDir.Combine("build-artifact");
         var testCoverageOutputDir         = artifactsDir.Combine("code-coverage");
 
-        var zipArtifactPathCoreClr = artifactsDir.CombineWithFilePath("ApplicationName-bin-corefx-v" + semVersion + ".zip"); // TODO :: Configurable per project
-        var zipArtifactPathDesktop = artifactsDir.CombineWithFilePath("ApplicationName-bin-fullfx-v" + semVersion + ".zip"); // TODO :: Configurable per project
-        var zipArtifactPathStandard = artifactsDir.CombineWithFilePath("ApplicationName-bin-standardfx-v" + semVersion + ".zip"); // TODO :: Configurable per project
-
+//         var zipArtifactPathCoreClr = artifactsDir.CombineWithFilePath("DotNetHelper-Contracts-bin-fx-v" + semVersion + ".zip"); // TODO :: Configurable per project
+//         var zipArtifactPathDesktop = artifactsDir.CombineWithFilePath("DotNetHelper-Contracts-bin-fullfx-v" + semVersion + ".zip"); // TODO :: Configurable per project
+//         var zipArtifactPathStandard = artifactsDir.CombineWithFilePath("DotNetHelper-Contracts-bin-standardfx-v" + semVersion + ".zip"); // TODO :: Configurable per project
+ 
         var testCoverageOutputFilePath = testCoverageOutputDir.CombineWithFilePath("TestResult.xml");
 
         var releaseNotesOutputFilePath = buildArtifactDir.CombineWithFilePath("releasenotes.md");
@@ -56,17 +56,11 @@ public class BuildPaths
             buildArtifactDir,
             testCoverageOutputDir,
             nugetRootDir,
-            artifactsBinDir,
-            artifactsBinFullFxDir,
-            artifactsBinCoreFxDir,
-            artifactsBinStandardFxDir);
+            artifactsBinDir);
 
         // Files
         var buildFiles = new BuildFiles(
             context,
-            zipArtifactPathCoreClr,
-            zipArtifactPathDesktop,
-            zipArtifactPathStandard,
             testCoverageOutputFilePath,
             releaseNotesOutputFilePath,
             vsixOutputFilePath,
@@ -83,9 +77,6 @@ public class BuildPaths
 
 public class BuildFiles
 {
-    public FilePath ZipArtifactPathCoreClr { get; private set; }
-    public FilePath ZipArtifactPathDesktop { get; private set; }
-    public FilePath ZipArtifactPathStandard { get; private set; }
     public FilePath TestCoverageOutputFilePath { get; private set; }
     public FilePath ReleaseNotesOutputFilePath { get; private set; }
     public FilePath VsixOutputFilePath { get; private set; }
@@ -94,9 +85,6 @@ public class BuildFiles
 
     public BuildFiles(
         ICakeContext context,
-        FilePath zipArtifactPathCoreClr,
-        FilePath zipArtifactPathDesktop,
-        FilePath zipArtifactPathStandard,
         FilePath testCoverageOutputFilePath,
         FilePath releaseNotesOutputFilePath,
         FilePath vsixOutputFilePath,
@@ -104,9 +92,6 @@ public class BuildFiles
         FilePath gemOutputFilePath
         )
     {
-        ZipArtifactPathCoreClr = zipArtifactPathCoreClr;
-        ZipArtifactPathDesktop = zipArtifactPathDesktop;
-        ZipArtifactPathStandard = zipArtifactPathStandard;
         TestCoverageOutputFilePath = testCoverageOutputFilePath;
         ReleaseNotesOutputFilePath = releaseNotesOutputFilePath;
         VsixOutputFilePath = vsixOutputFilePath;
@@ -122,9 +107,6 @@ public class BuildDirectories
     public DirectoryPath BuildArtifact { get; private set; }
     public DirectoryPath TestCoverageOutput { get; private set; }
     public DirectoryPath ArtifactsBin { get; private set; }
-    public DirectoryPath ArtifactsBinFullFx { get; private set; }
-    public DirectoryPath ArtifactsBinCoreFx { get; private set; }
-    public DirectoryPath ArtifactsBinStandardFx { get; private set; }
     public ICollection<DirectoryPath> ToClean { get; private set; }
 
     public BuildDirectories(
@@ -132,10 +114,7 @@ public class BuildDirectories
         DirectoryPath buildArtifactDir,
         DirectoryPath testCoverageOutputDir,
         DirectoryPath nugetRootDir,
-        DirectoryPath artifactsBinDir,
-        DirectoryPath artifactsBinFullFxDir,
-        DirectoryPath artifactsBinCoreFxDir,
-        DirectoryPath artifactsBinStandardFxDir
+        DirectoryPath artifactsBinDir
         )
     {
         Artifacts = artifactsDir;
@@ -143,18 +122,16 @@ public class BuildDirectories
         TestCoverageOutput = testCoverageOutputDir;
         NugetRoot = nugetRootDir;
         ArtifactsBin = artifactsBinDir;
-        ArtifactsBinFullFx = artifactsBinFullFxDir;
-        ArtifactsBinCoreFx = artifactsBinCoreFxDir;
-        ArtifactsBinStandardFx = artifactsBinStandardFxDir;
-        ToClean = new[] {
+        ToClean = new List<DirectoryPath>() {
             Artifacts,
             BuildArtifact,
             TestCoverageOutput,
             NugetRoot,
             ArtifactsBin,
-            ArtifactsBinFullFx,
-             ArtifactsBinCoreFx,
-            ArtifactsBinStandardFx,
         };
+        foreach(var framework in MyProject.TargetFrameworks){
+              ToClean.Add(new DirectoryPath(ArtifactsBin.Combine(framework).ToString()));
+        }
+
     }
 }

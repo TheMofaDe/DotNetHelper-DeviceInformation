@@ -1,0 +1,190 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Code/Github/TheMofaDe/DotNetHelper-DeviceInformation/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.html",
+          "hash": "NrSJCGPOHSKz3bJJANxIsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper_DeviceInformation.DeviceInformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper_DeviceInformation.DeviceInformation.html",
+          "hash": "claG6Eeis+U6cc9ZlvwN9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper_DeviceInformation.Models.DiskDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper_DeviceInformation.Models.DiskDriver.html",
+          "hash": "e3Wgy3iF+3vpPnfwFtuM7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper_DeviceInformation.Models.NetworkDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper_DeviceInformation.Models.NetworkDriver.html",
+          "hash": "hvZw4EZqfVlE3nz/oiBoog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper_DeviceInformation.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper_DeviceInformation.Models.html",
+          "hash": "UtBQHOYokzdlNPsRhRY3Vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper_DeviceInformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper_DeviceInformation.html",
+          "hash": "+raQlHfjyk0gPBpIwSPn8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/sample.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/sample.html",
+          "hash": "2f2JaOVTCpu8eyoJrXGhOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon.png",
+          "link_to_path": "D:\\Code\\Github\\TheMofaDe\\DotNetHelper-DeviceInformation\\docs/images/icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "VWIlHxLK+7TiCQiW9Fuzcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "langwordmapping/langwordMapping.yml",
+      "output": {
+        "resource": {
+          "relative_path": "langwordmapping/langwordMapping.yml",
+          "link_to_path": "D:\\Code\\Github\\TheMofaDe\\DotNetHelper-DeviceInformation\\docs/langwordmapping/langwordMapping.yml"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 2
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 6,
+          "skipped_file_count": 6
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

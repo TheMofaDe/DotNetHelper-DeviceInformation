@@ -1,9 +1,7 @@
-﻿- name: Home
+- name: Home
   href: index.md
 - name: Articles
   href: articles/
-  homepage: articles/docfx_getting_started.md
+  homepage: articles/sample.md
 - name: API Documentation
-  href: obj/api/
-- name: REST API
-  href: restapi/
+  href: api/DotNetHelper-DeviceInformation.html

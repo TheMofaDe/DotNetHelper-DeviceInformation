@@ -1,0 +1,328 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  commentId: T:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  id: DeviceInformation.DeviceOs
+  parent: DotNetHelper_DeviceInformation
+  children:
+  - DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Android
+  - DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.iOS
+  - DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Linux
+  - DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.MacOs
+  - DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Unknown
+  - DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.UWP
+  - DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Windows
+  - DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.WinPhone
+  langs:
+  - csharp
+  - vb
+  name: DeviceInformation.DeviceOs
+  nameWithType: DeviceInformation.DeviceOs
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  type: Enum
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: DeviceOs
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 101
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nEnum DeviceOs\n"
+  example: []
+  syntax:
+    content: public enum DeviceOs
+    content.vb: Public Enum DeviceOs
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Unknown
+  commentId: F:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Unknown
+  id: Unknown
+  parent: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  langs:
+  - csharp
+  - vb
+  name: Unknown
+  nameWithType: DeviceInformation.DeviceOs.Unknown
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Unknown
+  type: Field
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: Unknown
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 106
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nThe unknown\n"
+  example: []
+  syntax:
+    content: Unknown = 0
+    return:
+      type: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Windows
+  commentId: F:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Windows
+  id: Windows
+  parent: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  langs:
+  - csharp
+  - vb
+  name: Windows
+  nameWithType: DeviceInformation.DeviceOs.Windows
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Windows
+  type: Field
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: Windows
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 110
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nThe windows\n"
+  example: []
+  syntax:
+    content: Windows = 1
+    return:
+      type: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.MacOs
+  commentId: F:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.MacOs
+  id: MacOs
+  parent: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  langs:
+  - csharp
+  - vb
+  name: MacOs
+  nameWithType: DeviceInformation.DeviceOs.MacOs
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.MacOs
+  type: Field
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: MacOs
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 114
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nThe mac os\n"
+  example: []
+  syntax:
+    content: MacOs = 2
+    return:
+      type: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.iOS
+  commentId: F:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.iOS
+  id: iOS
+  parent: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  langs:
+  - csharp
+  - vb
+  name: iOS
+  nameWithType: DeviceInformation.DeviceOs.iOS
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.iOS
+  type: Field
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: iOS
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 118
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nThe i os\n"
+  example: []
+  syntax:
+    content: iOS = 3
+    return:
+      type: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.WinPhone
+  commentId: F:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.WinPhone
+  id: WinPhone
+  parent: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  langs:
+  - csharp
+  - vb
+  name: WinPhone
+  nameWithType: DeviceInformation.DeviceOs.WinPhone
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.WinPhone
+  type: Field
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: WinPhone
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 122
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nThe win phone\n"
+  example: []
+  syntax:
+    content: WinPhone = 4
+    return:
+      type: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Android
+  commentId: F:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Android
+  id: Android
+  parent: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  langs:
+  - csharp
+  - vb
+  name: Android
+  nameWithType: DeviceInformation.DeviceOs.Android
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Android
+  type: Field
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: Android
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 126
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nThe android\n"
+  example: []
+  syntax:
+    content: Android = 5
+    return:
+      type: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.UWP
+  commentId: F:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.UWP
+  id: UWP
+  parent: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  langs:
+  - csharp
+  - vb
+  name: UWP
+  nameWithType: DeviceInformation.DeviceOs.UWP
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.UWP
+  type: Field
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: UWP
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 130
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nThe uwp\n"
+  example: []
+  syntax:
+    content: UWP = 6
+    return:
+      type: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Linux
+  commentId: F:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Linux
+  id: Linux
+  parent: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  langs:
+  - csharp
+  - vb
+  name: Linux
+  nameWithType: DeviceInformation.DeviceOs.Linux
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs.Linux
+  type: Field
+  source:
+    remote:
+      path: src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper-DeviceInformation
+    id: Linux
+    path: ../src/DotNetHelper-DeviceInformation/DeviceInformation.cs
+    startLine: 134
+  assemblies:
+  - DotNetHelper-DeviceInformation
+  namespace: DotNetHelper_DeviceInformation
+  summary: "\nThe linux\n"
+  example: []
+  syntax:
+    content: Linux = 7
+    return:
+      type: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: DotNetHelper_DeviceInformation
+  commentId: N:DotNetHelper_DeviceInformation
+  name: DotNetHelper_DeviceInformation
+  nameWithType: DotNetHelper_DeviceInformation
+  fullName: DotNetHelper_DeviceInformation
+- uid: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  commentId: T:DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
+  parent: DotNetHelper_DeviceInformation
+  name: DeviceInformation.DeviceOs
+  nameWithType: DeviceInformation.DeviceOs
+  fullName: DotNetHelper_DeviceInformation.DeviceInformation.DeviceOs
